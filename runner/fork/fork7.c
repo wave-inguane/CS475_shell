@@ -4,9 +4,9 @@
 void doit() 
 {
     if (Fork() == 0) {
-	Fork();
-	printf("hello\n");
-	exit(0);
+		Fork();
+		printf("hello\n");
+		exit(0);
     }
     return;
 }
@@ -14,7 +14,13 @@ void doit()
 int main() 
 {
     doit();
-    printf("hello\n");
+    printf("hello from main\n");
     exit(0);
 }
 /* $end forkprob5 */
+/*
+ * OUTPUT
+ hello from main
+ hello
+ hello
+ */

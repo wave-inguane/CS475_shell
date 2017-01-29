@@ -1,10 +1,10 @@
-fork: fork.o csapp.o
-	gcc -o prog -g fork.o csapp.o
+fork8: fork8.o csapp.o
+	gcc -o prog -g fork8.o csapp.o
 csapp.o: csapp.c csapp.h
 	gcc -c -g csapp.c
-fork.o: fork.c csapp.h 
-	gcc -c -g fork.c
+fork8.o: fork8.c csapp.h 
+	gcc -c -g fork8.c
 clean:
-	rm -f prog fork.o *.o *~
+	rm -f prog fork8.o *.o *~
 
 

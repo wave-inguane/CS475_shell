@@ -3,7 +3,7 @@
 
 void end(void) 
 {
-    printf("2"); fflush(stdout);
+    printf("2\n"); fflush(stdout);
 }
 
 int main() 
@@ -11,10 +11,10 @@ int main()
     if (Fork() == 0) 
 	atexit(end);
     if (Fork() == 0) {
-	printf("0"); fflush(stdout); 
+	printf("0\n"); fflush(stdout); 
     }
     else {
-        printf("1"); fflush(stdout); 
+        printf("1\n"); fflush(stdout); 
     }
     exit(0);
 }
