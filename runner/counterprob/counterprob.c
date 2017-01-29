@@ -17,11 +17,11 @@ int main()
     Signal(SIGUSR2, handler);
 
     if (Fork() == 0) {  /* Child finished to work */
-	for (i = 0; i < 5; i++) {
+			for (i = 0; i < 5; i++) {
 	    Kill(getppid(), SIGUSR2);
 	    printf("sent SIGUSR2 to parent\n");
-	}
-	exit(0);
+			}
+			exit(0);
     }
 
     Wait(NULL);
