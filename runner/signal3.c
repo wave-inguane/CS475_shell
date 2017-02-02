@@ -7,11 +7,11 @@ void handler2(int sig)
     char buf[MAXBUF];
 
     while ((pid = waitpid(-1, NULL, 0)) > 0) {
-	snprintf(buf, MAXBUF, "Handler reaped child %d\n", (int)pid); 
-	write(1, buf, strlen(buf));
+		snprintf(buf, MAXBUF, "Handler reaped child %d\n", (int)pid); 
+		write(1, buf, strlen(buf));
     }
     if (errno != ECHILD)
-	unix_error("waitpid error");
+		unix_error("waitpid error");
     Sleep(2);
     return;
 }

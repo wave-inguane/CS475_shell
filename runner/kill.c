@@ -13,6 +13,7 @@ int main()
     }
 
     /* Parent sends a SIGKILL signal to a child */
+		printf("child = %d\n", pid);
     Kill(pid, SIGKILL);
     exit(0);
 }
